@@ -1,4 +1,3 @@
-
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -86,6 +85,7 @@ function draw() {
   detectollision(stoneObj,mango10);
   detectollision(stoneObj,mango11);
   detectollision(stoneObj,mango12);
+}
 
   //create mouseDragged function here
 function mouseDragged(){
@@ -99,12 +99,11 @@ function mouseReleased(){
 
 //create keyPressed function here
 function keypressed(){
-  if(keyCode===SPACE){
+  if(keyCode===32){
     Matter.Body.setPosition(stoneObj.body,{x:235,y:420});
     launcherObject.attach(stoneObj.body);
   }
 }
-
   function detectollision(lstone,lmango){
 
   mangoBodyPosition=lmango.body.position
@@ -116,4 +115,3 @@ function keypressed(){
   	  Matter.Body.setStatic(lmango.body,false);
     }
   }
-}
